@@ -1,13 +1,14 @@
-// import Header from "../../components/Header/Header";
 import HeaderHome from "../../components/Header/Header";
-
+import Hero from "../../components/HeroSection/Hero";
+import './Home.css'
 
 export default function Home() {
     return (
         <>
-        <div>
+        <section className="home">
             <HeaderHome />
-        </div>
+            <Hero />
+        </section>
         </>
     )
 }

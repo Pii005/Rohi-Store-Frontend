@@ -1,0 +1,54 @@
+/* HERO */
+
+.hero {
+    padding: 80px 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background-color: #fff8f9;
+}
+
+/* TITULO */
+
+.hero-title {
+    font-size: 60px;
+    color: #5b4e4e;
+    margin-bottom: 15px;
+}
+
+/* SUBTITULO */
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #7a6b6b;
+    margin-bottom: 40px;
+}
+
+/* ICONOS */
+
+.hero-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-circle {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background-color: #c88f9b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+
+    color: white;
+}
