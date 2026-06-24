@@ -1,13 +1,16 @@
-function Sidebar() {
-    return (
-        <div className="sidebar">
+import "./Sidebar.css";
+
+export default function Sidebar() {
+  return (
+        <div className="sidebar-content">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li>Amigurumis</li>
+                <li>Llaveros</li>
+                <li>Accesorios</li>
+                <li>Ramos</li>
+                <li>Personalizados</li>
             </ul>
         </div>
     );
-};
+}
 
-export default Sidebar;

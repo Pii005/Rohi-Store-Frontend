@@ -1,7 +1,8 @@
 // import Header from "../../components/Header/Header";
 import HeaderHome from "../../components/Header/Header";
 
-const Home = () => {
+
+export default function Home() {
     return (
         <>
         <div>
@@ -10,5 +11,3 @@ const Home = () => {
         </>
     )
 }
-
-export default Home

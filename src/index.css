@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -11,8 +14,8 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, 'League Spartan', Roboto, sans-serif;
+  --heading: system-ui, 'League Spartan', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -58,6 +61,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--sans);
 }
 
 html,
