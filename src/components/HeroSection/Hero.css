@@ -16,7 +16,7 @@
 }
 
 .hero-flower {
-  width: 280px;        /* antes 140px */
+  width: 280px;
   height: auto;
   flex-shrink: 0;
 }
@@ -47,7 +47,7 @@
 
 .hero-icons {
   display: flex;
-  align-items: flex-end;   /* los costados abajo, el del medio sube con margin */
+  align-items: flex-end;
   gap: 16px;
   flex-shrink: 0;
 }
@@ -64,12 +64,55 @@
 }
 
 .hero-circle img {
-  width: 60%;
-  height: 60%;
+  width: 85%;
+  height: 85%;
   object-fit: contain;
 }
 
-/* el del medio sube */
+.hero-circle--aguja img {
+  width: 70%;
+  height: 70%;
+}
+
 .hero-circle--up {
   margin-bottom: 40px;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+  .hero {
+    padding: 24px 20px;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .hero-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+  }
+
+  .hero-flower {
+    width: 200px;      
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .hero-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  
+  .hero-icons {
+    display: none;
+  }
 }

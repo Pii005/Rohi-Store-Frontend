@@ -12,7 +12,7 @@ export default function Hero() {
         <img src={IconoFlorHome} alt="flor decorativa" className="hero-flower" />
         <div className="hero-text">
           <h1 className="hero-title">
-            Hechos con amor,<br />Tejidos a mano
+            Hechos con amor<br />Tejidos a mano
           </h1>
           <button className="hero-btn">Ver todo</button>
         </div>
@@ -22,9 +22,9 @@ export default function Hero() {
         <div className="hero-circle">
           <img src={Iconoboladelana} alt="lana" />
         </div>
-        <div className="hero-circle hero-circle--up">
-          <img src={Iconoaguja} alt="gancho" />
-        </div>
+        <div className="hero-circle hero-circle--up hero-circle--aguja">
+            <img src={Iconoaguja} alt="gancho" />
+          </div>
         <div className="hero-circle">
           <img src={Iconotijera} alt="tijera" />
         </div>
