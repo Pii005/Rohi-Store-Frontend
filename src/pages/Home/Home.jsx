@@ -1,14 +1,23 @@
 import HeaderHome from "../../components/Header/Header";
 import Hero from "../../components/HeroSection/Hero";
-import './Home.css'
+// import CardCarousel from "../../components/CardCarousel/CardCarousel";
+import CardCarousel from "../../components/CardCarousel/CardCarousel";
+import './Home.css';
 
-import Cards from "../../components/Cards/Cards";
-
-// PRUEBA
 const productosFavoritos = [
-  { id: 1, nombre: "Osito amigurumi", precio: "4.500", imagen: "../../assets/hero.png" },
+  { id: 1, nombre: "Osito amigurumi", precio: "4.500", imagen: "/imgs/osito.png" },
   { id: 2, nombre: "Bolso floral",    precio: "8.200", imagen: "/imgs/bolso.png" },
   { id: 3, nombre: "Vincha tejida",   precio: "2.800", imagen: "/imgs/vincha.png" },
+  { id: 4, nombre: "Ramo crochet",    precio: "6.500", imagen: "/imgs/ramo.png" },
+  { id: 5, nombre: "Ranita verde",    precio: "3.900", imagen: "/imgs/rana.png" },
+  { id: 6, nombre: "Conejito rosa",   precio: "4.200", imagen: "/imgs/conejo.png" },
+];
+
+const amigurumis = [
+  { id: 7,  nombre: "Osito polar",   precio: "4.800", imagen: "/imgs/polar.png" },
+  { id: 8,  nombre: "Patito bebé",   precio: "3.500", imagen: "/imgs/pato.png" },
+  { id: 9,  nombre: "Gatito gris",   precio: "4.100", imagen: "/imgs/gato.png" },
+  { id: 10, nombre: "Perrito café",  precio: "4.300", imagen: "/imgs/perro.png" },
 ];
 
 export default function Home() {
@@ -19,20 +28,8 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div className="home-section">
-        <h2 className="home-section-title">Productos favoritos</h2>
-        <div className="home-grid">
-          {productosFavoritos.map((p) => (
-            <Cards
-              key={p.id}
-              nombre={p.nombre}
-              precio={p.precio}
-              imagen={p.imagen}
-            />
-          ))}
-        </div>
-      </div>
-
+      <CardCarousel titulo="Productos favoritos" productos={productosFavoritos} />
+      <CardCarousel titulo="Amigurumis" productos={amigurumis} />
     </section>
   );
 }

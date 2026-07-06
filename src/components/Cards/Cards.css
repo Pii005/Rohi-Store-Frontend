@@ -5,6 +5,8 @@
   cursor: pointer;
   transition: transform 0.2s;
   width: 100%;
+  display: flex;              /* ← agregá esto */
+  flex-direction: column;     /* ← y esto */
 }
 
 .card:hover {
@@ -16,7 +18,7 @@
   aspect-ratio: 4 / 3;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #7a9e6e;   /* se ve si no hay imagen */
+  background-color: #7a9e6e;
 }
 
 .card-img {
@@ -27,17 +29,18 @@
 
 .card-info {
   padding: 10px 4px 4px;
+  flex: 1;                    /* ← empuja el info hacia abajo parejo */
 }
 
 .card-precio {
   font-size: 18px;
   font-weight: 700;
-  color: #5B4E4E;
+  color: #1a1a1a;
   margin-bottom: 4px;
 }
 
 .card-nombre {
   font-size: 14px;
   font-weight: 600;
-  color: #5B4E4E;
+  color: #1a1a1a;
 }
