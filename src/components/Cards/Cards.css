@@ -1,5 +1,5 @@
 .card {
-  background-color: #8fa87a;
+  background-color: #8C9B80;
   border-radius: 16px;
   padding: 12px;
   cursor: pointer;
@@ -18,7 +18,7 @@
   aspect-ratio: 4 / 3;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #7a9e6e;
+  background-color: #A6B29A;
 }
 
 .card-img {
@@ -35,12 +35,18 @@
 .card-precio {
   font-size: 18px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #5B4E4E;
   margin-bottom: 4px;
 }
 
 .card-nombre {
   font-size: 14px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #5B4E4E;
+}
+
+.card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }

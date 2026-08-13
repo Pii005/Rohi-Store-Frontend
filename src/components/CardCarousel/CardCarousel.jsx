@@ -83,10 +83,15 @@ export default function CardCarousel({ titulo, productos }) {
           onMouseLeave={onMouseLeave}
         >
           {productos.map((p) => (
-            <div className="carousel-item" key={p.id}>
-              <Cards nombre={p.nombre} precio={p.precio} imagen={p.imagen} />
+            <div className="carousel-item" key={p._id}>
+                <Cards
+                    id={p._id}
+                    nombre={p.nombre}
+                    precio={p.precio}
+                    imagen={p.imagen}
+                />
             </div>
-          ))}
+        ))}
         </div>
 
         {/* <button className="carousel-btn" onClick={() => scroll("right")}>

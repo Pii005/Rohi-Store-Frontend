@@ -5,8 +5,9 @@
 .carousel-title {
   font-size: 22px;
   font-weight: 700;
-  color: #3a2a2a;
+  color: #5B4E4E;
   margin-bottom: 16px;
+  text-align: left;
 }
 
 .carousel-wrapper {
