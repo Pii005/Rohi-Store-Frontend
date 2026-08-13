@@ -1,0 +1,124 @@
+.admin-productos h1 {
+    color: #2b2b2b;
+    margin-top: 0;
+}
+
+.admin-productos-estado {
+    color: #666;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.admin-productos-error {
+    color: #a33;
+}
+
+.admin-productos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-producto-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.admin-producto-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.admin-producto-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-producto-info h3 {
+    margin: 0 0 4px;
+    color: #2b2b2b;
+    font-size: 16px;
+}
+
+.admin-producto-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.admin-producto-categoria {
+    text-transform: capitalize;
+    font-size: 12px !important;
+    color: #999 !important;
+}
+
+.admin-producto-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.admin-producto-actions button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    background-color: #e8dede;
+    color: #333;
+}
+
+.admin-producto-eliminar {
+    background-color: #f5dede !important;
+    color: #a33 !important;
+}
+
+.admin-producto-edit {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-producto-edit input,
+.admin-producto-edit select,
+.admin-producto-edit textarea {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.admin-producto-edit-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-producto-guardar,
+.admin-producto-cancelar {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.admin-producto-guardar {
+    background-color: #c88f9b;
+    color: white;
+}
+
+.admin-producto-cancelar {
+    background-color: #eee;
+    color: #333;
+}

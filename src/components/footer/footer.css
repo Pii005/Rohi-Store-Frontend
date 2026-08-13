@@ -1,0 +1,256 @@
+/*
+   FOOTER
+*/
+
+.footer {
+    width: 100%;
+
+    margin-top: 50px;
+
+    background-color: #c88f9b;
+
+    color: #5b4e4e;
+
+    box-sizing: border-box;
+}
+
+
+/*
+   CONTENEDOR
+*/
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+
+    box-sizing: border-box;
+}
+
+
+/*
+   MARCA
+*/
+
+.footer-brand {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/*
+   LOGO
+*/
+
+.footer-logo-link {
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.footer-logo {
+    width: 120px;
+    height: 65px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/*
+   DESCRIPCIÓN
+*/
+
+.footer-brand p {
+    max-width: 280px;
+
+    margin: 10px 0 0;
+
+    color: #5b4e4e;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/*
+   LINKS
+*/
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-links h3 {
+    margin: 0 0 15px;
+
+    color: #55484a;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.footer-links a {
+    margin-bottom: 8px;
+
+    color: #5b4e4e;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/*
+   PARTE INFERIOR
+*/
+
+.footer-bottom {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border-top: 1px solid rgba(91, 78, 78, 0.2);
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #5b4e4e;
+
+    font-size: 12px;
+}
+
+
+/*
+   TABLET
+*/
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+
+        padding: 35px 25px;
+    }
+
+
+    /*
+       MARCA OCUPA TODO EL ANCHO
+    */
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+
+    .footer-logo {
+        width: 110px;
+        height: 60px;
+    }
+
+}
+
+
+/*
+   CELULAR
+*/
+
+@media (max-width: 500px) {
+
+    .footer {
+        margin-top: 35px;
+    }
+
+
+    .footer-container {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 30px 20px;
+    }
+
+
+    /*
+       MARCA
+    */
+
+    .footer-brand {
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .footer-brand p {
+        max-width: 250px;
+    }
+
+
+    /*
+       LINKS
+    */
+
+    .footer-links {
+        align-items: center;
+    }
+
+
+    .footer-links h3 {
+        margin-bottom: 12px;
+    }
+
+
+    .footer-links a {
+        margin-bottom: 7px;
+    }
+
+
+    /*
+       COPYRIGHT
+    */
+
+    .footer-bottom {
+        padding: 13px 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+
+}

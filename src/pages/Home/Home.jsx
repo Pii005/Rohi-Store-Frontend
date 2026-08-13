@@ -1,13 +1,131 @@
-// import Header from "../../components/Header/Header";
+import { useEffect, useState } from "react";
+
 import HeaderHome from "../../components/Header/Header";
+import Hero from "../../components/HeroSection/Hero";
+import Footer from "../../components/Footer/Footer";
+import CardCarousel from "../../components/CardCarousel/CardCarousel";
+import CustomOrderBanner from "../../components/CustomOrderBanner/CustomOrderBanner";
+
+import { getProductsByCategory } from "../../services/api";
+
+import "./Home.css";
 
 
 export default function Home() {
+
+    const [amigurumis, setAmigurumis] = useState([]);
+    const [accesorios, setAccesorios] = useState([]);
+    const [flores, setFlores] = useState([]);
+    const [llaveros, setLlaveros] = useState([]);
+
+
+    /*
+        CARGAR PRODUCTOS
+    */
+
+    useEffect(() => {
+
+        const loadProducts = async () => {
+
+            try {
+
+                const [
+                    amigurumisData,
+                    accesoriosData,
+                    floresData,
+                    llaverosData,
+                ] = await Promise.all([
+
+                    getProductsByCategory("amigurumis"),
+                    getProductsByCategory("accesorios"),
+                    getProductsByCategory("flores"),
+                    getProductsByCategory("llaveros"),
+
+                ]);
+
+
+                setAmigurumis(amigurumisData);
+                setAccesorios(accesoriosData);
+                setFlores(floresData);
+                setLlaveros(llaverosData);
+
+            } catch (error) {
+
+                console.error(
+                    "Error cargando productos:",
+                    error
+                );
+
+            }
+
+        };
+
+
+        loadProducts();
+
+    }, []);
+
+
     return (
-        <>
-        <div>
+
+        <div className="home">
+
+            {/* HEADER */}
+
             <HeaderHome />
+
+
+            {/* HERO */}
+
+            <div className="home-hero-wrapper">
+
+                <Hero />
+
+            </div>
+
+
+            {/* AMIGURUMIS */}
+
+            <CardCarousel
+                titulo="Amigurumis"
+                productos={amigurumis}
+            />
+
+
+            {/* ACCESORIOS */}
+
+            <CardCarousel
+                titulo="Accesorios"
+                productos={accesorios}
+            />
+
+
+            {/* PEDIDOS PERSONALIZADOS */}
+
+            <CustomOrderBanner />
+
+
+            {/* FLORES */}
+
+            <CardCarousel
+                titulo="Flores"
+                productos={flores}
+            />
+
+
+            {/* LLAVEROS */}
+
+            <CardCarousel
+                titulo="Llaveros"
+                productos={llaveros}
+            />
+
+
+            {/* FOOTER */}
+
+            <Footer />
+
         </div>
-        </>
-    )
+
+    );
 }

@@ -1,0 +1,58 @@
+.carousel-section {
+  padding: 28px 32px 16px;
+}
+
+.carousel-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #5B4E4E;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  /* scroll-snap-type: x mandatory;  ← SACADO, era lo que lo hacía rígido */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 4px;
+  cursor: grab;
+  user-select: none;
+  align-items: stretch;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 200px;
+  display: flex;
+}
+
+.carousel-btn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #8fa87a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: #7a9e6e;
+}
